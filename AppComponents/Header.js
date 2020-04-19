@@ -2,12 +2,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 
-export default function(props){
-	let totalSpent = props.totalSpent
-	return(<View style={styles.nav}>
+export default function(){
+	return(<View style={styles.header}>
 		<Text style={styles.text}>
-			
-			<Text style={{color:"#ED6D93"}}>&#8377; {-totalSpent}</Text> Spent Today
+			Expense Tracker
 		</Text>
 	</View>)
 }
@@ -15,18 +13,15 @@ export default function(props){
 
     
 const styles = StyleSheet.create({
-  nav: {
+  header: {
     width: "100%",
     backgroundColor: 'black',
     justifyContent: "center",
-    
+    height: 75,
     padding: 30,
     marginTop:30
     },
   text: {
-	color:"white",
-	fontSize:25,
-	fontWeight:"bold",
-	textAlign: "center"
+	color:"white"
   }
 })
