@@ -7,7 +7,7 @@ export default function(props){
 	return(<View style={styles.nav}>
 		<Text style={styles.text}>
 			
-			<Text style={{color:"#ED6D93"}}>&#8377; {-totalSpent}</Text> Spent Today
+			<Text style={{color:"#ED6D93"}}>&#8377; {-totalSpent}</Text> spent today
 		</Text>
 	</View>)
 }
