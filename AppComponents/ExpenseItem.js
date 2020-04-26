@@ -4,6 +4,7 @@ import IconGetter from "./categoryImages/IconGetter"
 import ArrowUp from "./categoryImages/ArrowUp"
 import ArrowDown from "./categoryImages/ArrowDown"
 
+import categories from "./categories"
 var amt=undefined
 
 export default function(props){
@@ -25,7 +26,7 @@ export default function(props){
 			<View style={styles.container}>
 				<View style={styles.leftContainer}>
 					<View style={styles.imageContainer}>
-						<IconGetter icon={category} style={{width:45,height:45}}/>
+						<IconGetter icon={categories[category]} style={{width:45,height:45}}/>
 					</View>
 					<View style={styles.textContainer}>
 						<Text style={{color:"white",fontSize:18,marginLeft:10,textAlign:"center"}}>{name}</Text>
@@ -105,7 +106,7 @@ const styles= StyleSheet.create({
 
 
 function getTransactionNatureColor(amount){
-	if(amount<0){
+	if(amount<=0){
 		return "red"
 	}
 	else{
@@ -114,7 +115,7 @@ function getTransactionNatureColor(amount){
 }
 
 function getArrow(amt){
-	if(amt<0)
+	if(amt<=0)
 		return <ArrowUp style={{padding:5,width:15,height:15}}/>
 	else
 		return <ArrowDown style={{padding:5,width:15,height:15}}/>

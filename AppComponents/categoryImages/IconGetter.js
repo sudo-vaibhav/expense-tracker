@@ -1,11 +1,10 @@
 import React from 'react';
-
 import Food from "./icons/Food"
 import Internet from "./icons/Internet"
 import Bills from "./icons/Bills"
 import Medical from "./icons/Medical"
 import Entertainment from "./icons/Entertainment"
-import Book from "./icons/Book"
+import Books from "./icons/Books"
 
 export default function(props){
 	let icon = props.icon
@@ -21,11 +20,13 @@ export default function(props){
 	if(icon == "Medical"){
 		return (<Medical />)
 	}
-	if(icon == "Book"){
-		return (<Book />)
+	if(icon == "Books"){
+		return (<Books />)
 	}
 	if(icon == "Entertainment"){
 		return <Entertainment />
 	}
+	return <Bills />
+	
 	
 }
