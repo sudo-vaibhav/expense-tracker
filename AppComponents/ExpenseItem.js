@@ -5,10 +5,12 @@ import ArrowUp from "./categoryImages/ArrowUp"
 import ArrowDown from "./categoryImages/ArrowDown"
 
 import categories from "./categories"
+import modes from "./modes"
+
 var amt=undefined
 
 export default function(props){
-		let {name,amount,category} = props.data
+		let {name,amount,category,mode} = props.data
 		amt = amount
 		amount=Math.abs(amount)
 		if(amount>999){
@@ -34,8 +36,8 @@ export default function(props){
 					</View>
 				</View>
 				<View style={styles.rightContainer}>
-				<Text style={{color:"#ED6D93", fontWeight:"bold", fontSize: 18}}>&#8377; {amount}
-				</Text>
+				<Text style={{color:"#ED6D93", fontWeight:"bold", fontSize: 18}}>&#8377; {amount}</Text>
+				<Text style={{color:"yellow",fontSize:16,marginLeft:10,textAlign:"center"}}>{modes[mode]}</Text>
 				</View>
 			</View>
 		)

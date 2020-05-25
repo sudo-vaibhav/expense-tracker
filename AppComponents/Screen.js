@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View ,ScrollView} from 'react-native';
 import Navbar from "./Navbar"
 import ExpenditureList from "./ExpenditureList"
 import AddButton from "./AddButton"
@@ -41,12 +41,12 @@ export default function Screen() {
     totalSpent+=expense.amount
   })
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Navbar totalSpent={totalSpent}/>
       <AddButton onAddExpense = {addExpenseHandler}/>
       <ExpenditureList expenses={expenses}/>
       
-    </View>
+    </ScrollView>
   );
 }
 
