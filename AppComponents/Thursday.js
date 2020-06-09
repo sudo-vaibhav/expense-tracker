@@ -1,18 +1,19 @@
 import React,{useState} from 'react';
-import { StyleSheet, Text, View ,ScrollView} from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+
 import Navbar from "./Navbar"
 import ExpenditureList from "./ExpenditureList"
 import AddButton from "./AddButton"
 
 var expenseReset = [
-            {name: `McDonald's`,amount:-250,backgroundColor:"#ff6060",category:"Food",mode:"PayTM" },
+            {name: `Electricity`,amount:-950,backgroundColor:"#ff6060",category:"Bills",mode:"Credit-Card" },
             
           ]
 
 
-export default function Screen() {
+export default function Thursday() {
   const [expenses,setExpenses] = useState([
-                                    {name: `McDonald's`,amount:-250 ,category: 0 ,mode:1},
+                                    {name: `Electricity`,amount:-950 ,category: 2 ,mode:3},
                                     
                                   ])
   const addExpenseHandler = (newExpense)=>{

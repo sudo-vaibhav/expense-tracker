@@ -12,9 +12,67 @@ export default function About({navigation}) {
             style={styles.ImageIconStyle}
           />
           <View style={styles.SeparatorLine} />
-          <Text style={styles.TextStyle}> Let's Get Started</Text>
+          <Text style={styles.TextStyle}> Let's Get Started </Text>
         </TouchableOpacity>
-      </View> 
+        <View style={{marginBottom:10, marginTop:10, width:150}}>
+          <Button  titleStyle={{
+               justifyContent:"center",
+              alignItems:"center",
+               fontSize: 35
+             }}  title="Monday" buttonStyle={{backgroundColor: "#ED6D93", width:200 ,height:180,marginBottom:60}} onPress={() => navigation.navigate('Monday')}>
+          </Button>
+          </View>
+          <View style={{marginBottom:10, marginTop:10, width:150}}>
+          <Button  titleStyle={{
+               justifyContent:"center",
+              alignItems:"center",
+               fontSize: 35
+             }}  title="Tuesday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:30}} onPress={() => navigation.navigate('Tuesday')}>
+          </Button>
+          </View>
+          <View style={{marginBottom:10, marginTop:10, width:150}}>
+          <Button  titleStyle={{
+               justifyContent:"center",
+              alignItems:"center",
+               fontSize: 35
+             }}  title="Wednesday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:30}} onPress={() => navigation.navigate('Wednesday')}>
+          </Button>
+          </View>
+          <View style={{marginBottom:10, marginTop:10, width:150}}>
+          <Button  titleStyle={{
+               justifyContent:"center",
+              alignItems:"center",
+               fontSize: 35
+             }}  title="Thursday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:30}} onPress={() => navigation.navigate('Thursday')}>
+          </Button>
+          </View>
+          <View style={{marginBottom:10, marginTop:10, width:150}}>
+          <Button  titleStyle={{
+               justifyContent:"center",
+              alignItems:"center",
+               fontSize: 35
+             }}  title="Friday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:30}} onPress={() => navigation.navigate('Friday')}>
+          </Button>
+          </View>
+          <View style={{marginBottom:10, marginTop:10, width:150}}>
+          <Button  titleStyle={{
+               justifyContent:"center",
+              alignItems:"center",
+               fontSize: 35
+             }}  title="Saturday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:30}} onPress={() => navigation.navigate('Saturday')}>
+          </Button>
+          </View>
+          <View style={{marginBottom:10, marginTop:10, width:150}}>
+          <Button  titleStyle={{
+               justifyContent:"center",
+              alignItems:"center",
+               fontSize: 35
+             }}  title="Sunday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:30}} onPress={() => navigation.navigate('Sunday')}>
+          </Button>
+          </View>
+          
+      </View>
+
   );
 }
 
