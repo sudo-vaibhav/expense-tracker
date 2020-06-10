@@ -5,16 +5,16 @@ import Navbar from "./Navbar"
 import ExpenditureList from "./ExpenditureList"
 import AddButton from "./AddButton"
 
-// var expenseReset = [
-//             {name: `McDonald's`,amount:-250,backgroundColor:"#ff6060",category:"Food",mode:"PayTm" },
+var expenseReset = [
+            {name: `Electricity`,amount:-950,backgroundColor:"#ff6060",category:"Bills",mode:"Credit-Card" },
             
-//           ]
+          ]
 
 
-export default function Monday() {
+export default function Add() {
   const [expenses,setExpenses] = useState([
-                                    {name: `McDonald's`,amount:-250 ,category: 0 ,mode:1},
-                                    {name: `Pocket Money`,amount:100 ,category: 2 ,mode:2},
+                                    {name: `Hotstar`,amount:-499 ,category: 4 ,mode:4},
+
                                     
                                   ])
   const addExpenseHandler = (newExpense)=>{
@@ -31,6 +31,7 @@ export default function Monday() {
   return (
     <ScrollView style={styles.container}>
       <Navbar totalSpent={totalSpent}/>
+      <AddButton onAddExpense = {addExpenseHandler}/>
       <ExpenditureList expenses={expenses}/>
       
     </ScrollView>

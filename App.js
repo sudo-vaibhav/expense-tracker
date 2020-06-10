@@ -7,6 +7,8 @@ import Navbar from "./AppComponents/Navbar";
 import ExpenditureList from "./AppComponents/ExpenditureList";
 import AddButton from "./AppComponents/AddButton";
 import About from "./AppComponents/About";
+import Record from "./AppComponents/Record";
+import Add from "./AppComponents/Add";
 import Monday from "./AppComponents/Monday";
 import Tuesday from "./AppComponents/Tuesday";
 import Wednesday from "./AppComponents/Wednesday";
@@ -21,6 +23,12 @@ const AboutStack = createStackNavigator({
   },
   Home: {
     screen: Screen,
+  },
+  Record: {
+  	screen: Record,
+  },
+  Add: {
+  	screen: Add,
   },
   Monday: {
   	screen: Monday,
