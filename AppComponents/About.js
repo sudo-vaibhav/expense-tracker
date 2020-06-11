@@ -12,9 +12,11 @@ export default function About({navigation}) {
             style={styles.ImageIconStyle}
           />
           <View style={styles.SeparatorLine} />
-          <Text style={styles.TextStyle}> Let's Get Started</Text>
+          <Text style={styles.TextStyle}> Let's Get Started </Text>
         </TouchableOpacity>
-      </View> 
+          
+      </View>
+
   );
 }
 

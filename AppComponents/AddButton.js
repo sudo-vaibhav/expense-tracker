@@ -7,7 +7,7 @@ import categories from "./categories"
 import modes from "./modes"
 
 
-export default function(props){
+export default function AddButton(props){
 	const [transactionDescription,setTransactionDescription] = useState("")
 	const [transactionAmount,setTransactionAmount] = useState(0)
 	const [categoryIndex,setCategory] = useState(0)

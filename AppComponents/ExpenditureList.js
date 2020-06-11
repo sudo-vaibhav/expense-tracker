@@ -22,7 +22,7 @@ const expenditureListstyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: "#0F164D",
-    paddingBottom : 150
+    paddingBottom : 800,
     
     }
 })
