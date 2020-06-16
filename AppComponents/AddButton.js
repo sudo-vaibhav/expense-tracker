@@ -9,11 +9,13 @@ import modes from "./modes"
 
 export default function AddButton(props){
 	const [transactionDescription,setTransactionDescription] = useState("")
-	const [transactionAmount,setTransactionAmount] = useState(0)
+	const [transactionAmount,setTransactionAmount] = useState("0")
+	// const [transactionAmount,setTransactionAmount] = useState(0)
 	const [categoryIndex,setCategory] = useState(0)
 	const [modeIndex,setMode] = useState(0)
 	const transAmtHandler = (transAmt)=>{
-		setTransactionAmount(parseFloat(transAmt))
+		// setTransactionAmount(parseFloat(transAmt))
+		setTransactionAmount(transAmt)
 	} 
 	const transDescHandler= (transDesc)=>{
 		setTransactionDescription(transDesc)
@@ -24,11 +26,12 @@ export default function AddButton(props){
 	}
 
 	const modeDropdownHandler = (selectedMode)=>{
+		console.log(selectedMode)
 		setMode(selectedMode)
 	}
 	
 	const addButtonPressHandler = ()=>{
-		props.onAddExpense({name: transactionDescription,amount: -transactionAmount,category: categoryIndex, mode:modeIndex})
+		props.onAddExpense({name: transactionDescription,amount: -parseFloat(transactionAmount),category: categoryIndex, mode:modeIndex})
 		setTransactionAmount("")
 		setTransactionDescription("")
 		setCategory(-1)
@@ -40,8 +43,8 @@ export default function AddButton(props){
 				<View style={{width:"100%",paddingRight:20,paddingLeft:20,paddingTop:60,flexDirection:"column"}}>
 					<TextInput style={{borderBottomWidth:2,borderBottomColor:"#ED6D93",margin:10,height:"20%",color:"white"}} placeholder="Transaction Description" value= {transactionDescription} onChangeText={transDescHandler}>
 					</TextInput>
-					<ModalDropdown defaultIndex={categoryIndex} onSelect={categoryDropdownHandler} dropdownTextStyle={{fontSize: 20}} dropdownStyle={{width:"60%"}} textStyle={{color:"white",borderBottomWidth:2,fontSize:15,margin:10,borderBottomColor:"#ED6D93"}} style={{marginTop:10,height:"20%"}} options={categories} />
-					<ModalDropdown defaultIndex={modeIndex} onSelect={modeDropdownHandler} dropdownTextStyle={{fontSize: 20}} dropdownStyle={{width:"60%"}} textStyle={{color:"white",borderBottomWidth:2,fontSize:15,margin:10,borderBottomColor:"#ED6D93"}} style={{marginTop:10,height:"30%"}} options={modes} />
+					<ModalDropdown defaultIndex={categoryIndex} onSelect={(index)=>categoryDropdownHandler(index)} dropdownTextStyle={{fontSize: 20}} dropdownStyle={{width:"60%"}} textStyle={{color:"white",borderBottomWidth:2,fontSize:15,margin:10,borderBottomColor:"#ED6D93"}} style={{marginTop:10,height:"20%"}} options={categories} />
+					<ModalDropdown defaultIndex={modeIndex} onSelect={index=>modeDropdownHandler(index)} dropdownTextStyle={{fontSize: 20}} dropdownStyle={{width:"60%"}} textStyle={{color:"white",borderBottomWidth:2,fontSize:15,margin:10,borderBottomColor:"#ED6D93"}} style={{marginTop:10,height:"30%"}} options={modes} />
 
 				</View>
 		                
