@@ -10,7 +10,7 @@ export default function(props){
 		<View style={expenditureListstyles.expenditureStyles}>
 			<FlatList style={{backgroundColor:"#0F164D",width:"95%"}}
           data={expenses}
-          renderItem={({item}) => <ExpenseItem data={item}/>}
+          renderItem={({item}) => <ExpenseItem key={item.name} data={item}/>}
         />
 		</View>
 		  )
