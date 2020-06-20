@@ -32,7 +32,6 @@ export default function Saturday() {
     <ScrollView style={styles.container}>
       <Navbar totalSpent={totalSpent}/>
       <ExpenditureList expenses={expenses}/>
-      
     </ScrollView>
   );
 }

@@ -14,7 +14,7 @@ export default function Record({navigation}) {
                fontSize: 35
              }}  
              title="Monday" 
-             buttonStyle={{backgroundColor: "#ED6D93", width:200 ,height:180,marginBottom:60}} 
+             color="#ff6060"
              onPress={() => navigation.navigate('Monday')}>
           </Button>
           </View>
@@ -24,7 +24,7 @@ export default function Record({navigation}) {
                justifyContent:"center",
               alignItems:"center",
                fontSize: 35
-             }}  title="Tuesday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:20}} onPress={() => navigation.navigate('Tuesday')}>
+             }}  title="Tuesday" color="#ff6060" onPress={() => navigation.navigate('Tuesday')}>
           </Button>
           </View>
 
@@ -33,7 +33,7 @@ export default function Record({navigation}) {
                justifyContent:"center",
               alignItems:"center",
                fontSize: 35
-             }}  title="Wednesday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:20}} onPress={() => navigation.navigate('Wednesday')}>
+             }}  title="Wednesday" color="#ff6060" onPress={() => navigation.navigate('Wednesday')}>
           </Button>
           </View>
           <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
@@ -41,7 +41,7 @@ export default function Record({navigation}) {
                justifyContent:"center",
               alignItems:"center",
                fontSize: 35
-             }}  title="Thursday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:20}} onPress={() => navigation.navigate('Thursday')}>
+             }}  title="Thursday" color="#ff6060" onPress={() => navigation.navigate('Thursday')}>
           </Button>
           </View>
           <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
@@ -49,7 +49,7 @@ export default function Record({navigation}) {
                justifyContent:"center",
               alignItems:"center",
                fontSize: 35
-             }}  title="Friday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:20}} onPress={() => navigation.navigate('Friday')}>
+             }}  title="Friday" color="#ff6060" onPress={() => navigation.navigate('Friday')}>
           </Button>
           </View>
           <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
@@ -57,7 +57,7 @@ export default function Record({navigation}) {
                justifyContent:"center",
               alignItems:"center",
                fontSize: 35
-             }}  title="Saturday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:20}} onPress={() => navigation.navigate('Saturday')}>
+             }}  title="Saturday" color="#ff6060" onPress={() => navigation.navigate('Saturday')}>
           </Button>
           </View>
           <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
@@ -65,7 +65,12 @@ export default function Record({navigation}) {
                justifyContent:"center",
               alignItems:"center",
                fontSize: 35
-             }}  title="Sunday" buttonStyle={{backgroundColor: "#ED6D93",width:120,height:180,marginBottom:20}} onPress={() => navigation.navigate('Sunday')}>
+             }}  title="Sunday" color="#ff6060" onPress={() => navigation.navigate('Sunday')}>
+          </Button>
+          </View>
+          <View style={{marginTop:40, width:220, marginLeft:85}}>
+          <Button 
+           title="Weekly Analysis" color="green" onPress={() => navigation.navigate('Analysis')} >
           </Button>
           </View>
 
