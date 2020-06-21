@@ -2,8 +2,9 @@ import VerticalBarGraph from '@chartiful/react-native-vertical-bar-graph'
 import React,{useState} from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
-export default function Analysis() {
-  return (
+export default function Analysis(props) {
+  //props.navigation.state.params
+    return (
     <ScrollView style={styles.container}>
     <View style={{paddingTop:150, paddingLeft:7}}>
     <VerticalBarGraph

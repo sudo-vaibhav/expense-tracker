@@ -4,11 +4,50 @@ import Navbar from "./Navbar"
 import ExpenditureList from "./ExpenditureList"
 import AddButton from "./AddButton"
 
+
+import ModalDropdown from 'react-native-modal-dropdown'
 export default function Record({navigation}) {
-  return (
+  const days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+    function navigationDropdownChangeHandler(index){
+        navigation.navigate(days[index])
+
+  }
+    return (
     <View style={styles.MainContainer}>
-     <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
-          <Button  titleStyle={{
+     {/* <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}> */}
+         <ModalDropdown  defaultIndex={0} onSelect={index=>{navigationDropdownChangeHandler(index)}} 
+         dropdownTextStyle = {
+             {
+                 fontSize: 20
+             }
+         }
+         dropdownStyle = {
+             {
+                 width: "100%"
+             }
+         }
+         textStyle = {
+             {
+                 color: "white",
+                 borderBottomWidth: 2,
+                 fontSize: 15,
+                 margin: 10,
+                 borderBottomColor: "#ED6D93"
+             }
+         }
+         style = {
+             {
+                 marginTop: 10,
+                 height: "20%",
+                 width:"80%",
+                 marginLeft:"10%"
+             }
+         }
+         options = {
+             days
+         }
+         />
+          {/* <Button  titleStyle={{
                justifyContent:"center",
                alignItems:"center",
                fontSize: 35
@@ -16,8 +55,8 @@ export default function Record({navigation}) {
              title="Monday" 
              color="#ff6060"
              onPress={() => navigation.navigate('Monday')}>
-          </Button>
-          </View>
+          </Button> */}
+          {/* </View>
 
           <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
           <Button  titleStyle={{
@@ -67,10 +106,16 @@ export default function Record({navigation}) {
                fontSize: 35
              }}  title="Sunday" color="#ff6060" onPress={() => navigation.navigate('Sunday')}>
           </Button>
-          </View>
+          </View> */}
           <View style={{marginTop:40, width:220, marginLeft:85}}>
           <Button 
-           title="Weekly Analysis" color="green" onPress={() => navigation.navigate('Analysis')} >
+           title = "Weekly Analysis"
+           color = "#ff6060"
+           onPress = {
+               () => navigation.navigate('Analysis', {
+                   name: "Vaibhav"
+               })
+           } >
           </Button>
           </View>
 
