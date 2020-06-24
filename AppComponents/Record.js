@@ -8,7 +8,7 @@ import AddButton from "./AddButton"
 
 import ModalDropdown from 'react-native-modal-dropdown'
 export default function Record({navigation}) {
-  const days = ["Select Day","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+  const days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
     function navigationDropdownChangeHandler(index){
         navigation.navigate(days[index])
 
@@ -16,7 +16,7 @@ export default function Record({navigation}) {
     return (
     <View style={styles.MainContainer}>
      {/* <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}> */}
-         <ModalDropdown defaultSelect={0} defaultIndex={0} onSelect={index=>{navigationDropdownChangeHandler(index)}} 
+         <ModalDropdown defaultIndex={0} onSelect={index=>{navigationDropdownChangeHandler(index)}} 
          dropdownTextStyle = {
              {
                  fontSize: 20
