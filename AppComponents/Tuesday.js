@@ -30,7 +30,6 @@ export default function Tuesday() {
   return (
     <ScrollView style={styles.container}>
       <Navbar totalSpent={totalSpent}/>
-      <AddButton onAddExpense = {addExpenseHandler}/>
       <ExpenditureList expenses={expenses}/>
       
     </ScrollView>

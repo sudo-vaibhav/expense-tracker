@@ -16,7 +16,6 @@ import Thursday from "./AppComponents/Thursday";
 import Friday from "./AppComponents/Friday";
 import Saturday from "./AppComponents/Saturday";
 import Sunday from "./AppComponents/Sunday";
-
 const AboutStack = createStackNavigator({
   About: {
     screen: About,
