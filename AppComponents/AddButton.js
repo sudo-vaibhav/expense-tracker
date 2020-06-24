@@ -43,8 +43,12 @@ export default function AddButton(props){
 				<View style={{width:"100%",paddingRight:20,paddingLeft:20,paddingTop:60,flexDirection:"column"}}>
 					<TextInput style={{borderBottomWidth:2,borderBottomColor:"#ED6D93",margin:10,height:"20%",color:"white"}} placeholder="Transaction Description" value= {transactionDescription} onChangeText={transDescHandler}>
 					</TextInput>
+ master
 					<ModalDropdown defaultIndex={categoryIndex} onSelect={(index)=>categoryDropdownHandler(index)} dropdownTextStyle={{fontSize: 20}} dropdownStyle={{width:"80%"}} textStyle={{color:"white",borderBottomWidth:2,fontSize:15,margin:10,borderBottomColor:"#ED6D93"}} style={{marginTop:10,height:"20%"}} options={categories} />
 					<ModalDropdown defaultIndex={modeIndex} onSelect={index=>modeDropdownHandler(index)} dropdownTextStyle={{fontSize: 20}} dropdownStyle={{width:"80%"}} textStyle={{color:"white",borderBottomWidth:2,fontSize:15,margin:10,borderBottomColor:"#ED6D93"}} style={{marginTop:10,height:"30%"}} options={modes} />
+					<ModalDropdown defaultIndex={categoryIndex} onSelect={(index)=>categoryDropdownHandler(index)} dropdownTextStyle={{fontSize: 20}} dropdownStyle={{width:"60%"}} textStyle={{color:"white",borderBottomWidth:2,fontSize:15,margin:10,borderBottomColor:"#ED6D93"}} style={{marginTop:10,height:"20%"}} options={categories} />
+					<ModalDropdown defaultIndex={modeIndex} onSelect={index=>modeDropdownHandler(index)} dropdownTextStyle={{fontSize: 20}} dropdownStyle={{width:"60%"}} textStyle={{color:"white",borderBottomWidth:2,fontSize:15,margin:10,borderBottomColor:"#ED6D93"}} style={{marginTop:10,height:"30%"}} options={modes} />
+ master
 
 				</View>
 		                
