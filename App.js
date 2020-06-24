@@ -16,8 +16,6 @@ import Thursday from "./AppComponents/Thursday";
 import Friday from "./AppComponents/Friday";
 import Saturday from "./AppComponents/Saturday";
 import Sunday from "./AppComponents/Sunday";
-import Analysis from "./AppComponents/Analysis";
-
 const AboutStack = createStackNavigator({
   About: {
     screen: About,
@@ -51,9 +49,6 @@ const AboutStack = createStackNavigator({
   },
   Saturday: {
   	screen: Saturday,
-  },
-  Analysis: {
-  	screen: Analysis,
   }
 });
 

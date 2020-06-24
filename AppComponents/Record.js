@@ -1,3 +1,4 @@
+import VerticalBarGraph from '@chartiful/react-native-vertical-bar-graph'
 import React,{useState} from 'react';
 import {Text, View, StyleSheet, Button, TextInput, TouchableOpacity, Image, ScrollView} from 'react-native';
 import Navbar from "./Navbar"
@@ -7,7 +8,7 @@ import AddButton from "./AddButton"
 
 import ModalDropdown from 'react-native-modal-dropdown'
 export default function Record({navigation}) {
-  const days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+  const days = ["Select Day","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
     function navigationDropdownChangeHandler(index){
         navigation.navigate(days[index])
 
@@ -15,7 +16,7 @@ export default function Record({navigation}) {
     return (
     <View style={styles.MainContainer}>
      {/* <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}> */}
-         <ModalDropdown  defaultIndex={0} onSelect={index=>{navigationDropdownChangeHandler(index)}} 
+         <ModalDropdown defaultSelect={0} defaultIndex={0} onSelect={index=>{navigationDropdownChangeHandler(index)}} 
          dropdownTextStyle = {
              {
                  fontSize: 20
@@ -23,7 +24,7 @@ export default function Record({navigation}) {
          }
          dropdownStyle = {
              {
-                 width: "100%"
+                 width: "78%"
              }
          }
          textStyle = {
@@ -40,84 +41,43 @@ export default function Record({navigation}) {
                  marginTop: 10,
                  height: "20%",
                  width:"80%",
-                 marginLeft:"10%"
+                 marginLeft:"10%",
+
+
              }
          }
          options = {
              days
          }
-         />
-          {/* <Button  titleStyle={{
-               justifyContent:"center",
-               alignItems:"center",
-               fontSize: 35
-             }}  
-             title="Monday" 
-             color="#ff6060"
-             onPress={() => navigation.navigate('Monday')}>
-          </Button> */}
-          {/* </View>
-
-          <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
-          <Button  titleStyle={{
-               justifyContent:"center",
-              alignItems:"center",
-               fontSize: 35
-             }}  title="Tuesday" color="#ff6060" onPress={() => navigation.navigate('Tuesday')}>
-          </Button>
-          </View>
-
-          <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
-          <Button  titleStyle={{
-               justifyContent:"center",
-              alignItems:"center",
-               fontSize: 35
-             }}  title="Wednesday" color="#ff6060" onPress={() => navigation.navigate('Wednesday')}>
-          </Button>
-          </View>
-          <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
-          <Button  titleStyle={{
-               justifyContent:"center",
-              alignItems:"center",
-               fontSize: 35
-             }}  title="Thursday" color="#ff6060" onPress={() => navigation.navigate('Thursday')}>
-          </Button>
-          </View>
-          <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
-          <Button  titleStyle={{
-               justifyContent:"center",
-              alignItems:"center",
-               fontSize: 35
-             }}  title="Friday" color="#ff6060" onPress={() => navigation.navigate('Friday')}>
-          </Button>
-          </View>
-          <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
-          <Button  titleStyle={{
-               justifyContent:"center",
-              alignItems:"center",
-               fontSize: 35
-             }}  title="Saturday" color="#ff6060" onPress={() => navigation.navigate('Saturday')}>
-          </Button>
-          </View>
-          <View style={{marginBottom:20, marginTop:20, width:150, marginLeft:120}}>
-          <Button  titleStyle={{
-               justifyContent:"center",
-              alignItems:"center",
-               fontSize: 35
-             }}  title="Sunday" color="#ff6060" onPress={() => navigation.navigate('Sunday')}>
-          </Button>
-          </View> */}
-          <View style={{marginTop:40, width:220, marginLeft:85}}>
-          <Button 
-           title = "Weekly Analysis"
-           color = "#ff6060"
-           onPress = {
-               () => navigation.navigate('Analysis', {
-                   name: "Vaibhav"
-               })
-           } >
-          </Button>
-          </View>
+         ></ModalDropdown>
+         <View style={{paddingTop:80, paddingLeft:7}}>
+    <VerticalBarGraph
+  data={[150, 450, 150, 950, 350, 499, 699]}
+  labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
+  width={330}
+  height={400}
+  barRadius={5}
+  barWidthPercentage={0.65}
+  barColor='#53ae31'
+  baseConfig={{
+    hasXAxisBackgroundLines: false,
+    xAxisLabelStyle: {
+      position: 'left',
+      prefix: 'Rs',
+    }
+  }}
+  style={{
+    marginBottom: 30,
+    padding: 10,
+    paddingTop: 20,
+    paddingLeft:20,
+    borderRadius: 20,
+    backgroundColor: `#dff4d7`,
+    width: 380,
+  }}
+/>
+    </View>
+    
 
       </View>
   );
